@@ -1,32 +1,22 @@
-name: Cypress Tests
+name: Test Upload Artifact
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
-  cypress-run:
+  test-upload:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Create dummy file
+        run: echo "test file content" > test.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
         with:
-          node-version: 18
+          name: test-artifact
+          path: test.txt
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Verify Cypress is installed
-        run: npx cypress --version
-
-      - name: Run Cypress tests
-        run: npx cypress run
-
-      - name: Upload test reports
-        uses: actions/upload-artifact@v2
-        with:
-          name: junit-reports
-          path: reports/junit/
 

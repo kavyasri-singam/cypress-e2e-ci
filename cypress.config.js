@@ -1,9 +1,15 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
+  reporter: 'mocha-junit-reporter',
+  reporterOptions: {
+    mochaFile: 'reports/junit/results-[hash].xml',
+  },
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      // you can keep this empty for now
     },
+    baseUrl: 'https://automationexercise.com',
   },
-});
+})
+

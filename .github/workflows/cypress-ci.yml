@@ -25,7 +25,7 @@ jobs:
         run: npx cypress run
 
       - name: Upload test reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: junit-reports
           path: reports/junit/

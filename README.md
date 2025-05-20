@@ -1,43 +1,60 @@
-# 🚀 Cypress E2E CI Test
+# 🚀 Cypress E2E CI Project
+
+> End-to-end automation test suite for [AutomationExercise.com](https://automationexercise.com), built with Cypress and integrated with GitHub Actions CI.
+
+---
+
+## 🛠️ Tech Stack
+
+- ✅ Cypress (JavaScript)
+- ✅ Mocha + Chai
+- ✅ GitHub Actions (CI/CD)
+- ✅ Node.js & npm
+
+---
+
+## 📋 Features Tested
+
+- 🔐 User Login
+- 🛒 Product Search & Add to Cart
+- ✅ Checkout Process
+- 💳 Place Order Flow
+
+---
+
+## ✅ CI/CD Status
 
 ![CI](https://github.com/kavyasri-singam/cypress-e2e-ci/actions/workflows/cypress-ci.yml/badge.svg)
 
-This project contains **end-to-end tests** using **Cypress** and **GitHub Actions** for Continuous Integration (CI).
+Tests automatically run on every push using GitHub Actions 🚀
 
 ---
 
-## 🌐 Website Under Test
-🔗 [https://automationexercise.com](https://automationexercise.com)
+## 📊 Test Summary
+
+| Test Flow              | Status  |
+|------------------------|---------|
+| Login Functionality    | ✅ Pass |
+| Add to Cart            | ✅ Pass |
+| Checkout Process       | ✅ Pass |
+| Place Order            | ✅ Pass |
 
 ---
 
-## 🧪 Tech Stack
-
-- ✅ Cypress
-- ✅ JavaScript
-- ✅ GitHub Actions (CI)
-- ✅ Visual Studio Code
-
----
-
-## 🧾 Test Scenarios Covered
-
-- 🔐 Login with valid credentials
-- 🔍 Search for a product
-- 🛒 Add product to cart
-- 💳 Proceed to checkout and place order
-
----
-
-## 📂 How to Run Tests Locally
+## 🖥️ How to Run Locally
 
 ```bash
+git clone https://github.com/kavyasri-singam/cypress-e2e-ci.git
+cd cypress-e2e-ci
 npm install
-npx cypress open
+npx cypress open   # to open Cypress GUI
+npx cypress run    # to run tests in headless mode
 
 
-🙋‍♀️ Author
-Kavyasri Singam
+👩‍💻 Author
+KavyaSri Singam
+
+🌐 GitHub: @kavyasri-singam
 
 
 

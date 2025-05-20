@@ -1,23 +1,35 @@
-name: Test Upload Artifact
+name: Run Cypress Tests
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  test-upload:
-    runs-on: windows-latest
-
+  cypress-run:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Create dummy file
-        run: echo "test file content" > test.txt
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          name: test-artifact
-          path: test.txt
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify Cypress installation
+        run: npx cypress verify
+
+      - name: Run Cypress tests
+        run: npx cypress run
+
+
 
 

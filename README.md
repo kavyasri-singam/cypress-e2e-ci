@@ -6,9 +6,10 @@
 
 ## 🛠️ Tech Stack
 
-- ✅ Cypress (JavaScript)
-- ✅ Mocha + Chai
-- ✅ GitHub Actions (CI/CD)
+![Cypress](https://img.shields.io/badge/Cypress-13.7.0-brightgreen?logo=cypress)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
+![Mocha](https://img.shields.io/badge/Mocha-10.2.0-brown?logo=mocha)
+
 - ✅ Node.js & npm
 
 ---

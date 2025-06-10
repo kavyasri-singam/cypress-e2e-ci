@@ -55,7 +55,7 @@ npx cypress run    # to run tests in headless mode
 👩‍💻 Author
 KavyaSri Singam
 
-🌐 GitHub: @kavyasri-singam
+
 
 
 
